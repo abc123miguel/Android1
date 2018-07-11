@@ -51,8 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
-            int x=1;
-            Log.d("test","Testing "+x);
+
             WeatherInterface weatherInterface = retrofit.create(WeatherInterface.class);
             Call<WeatherResponse> call = weatherInterface.getWeatherFromSanFrancisco(API_KEY);
             WeatherResponse weatherResponse = null;
